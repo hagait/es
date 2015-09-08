@@ -1,0 +1,771 @@
+::: [Sergei Kravinoff][u4U7PtikRym7Vx3wTUZhuw][ip-10-0-110-62][inet[/10.0.110.62:9300]]{data=false, client=true}
+   
+    5.2% (25.8ms out of 500ms) cpu usage by thread 'pool-5-thread-13'
+     10/10 snapshots sharing following 8 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+       java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+    2.1% (10.3ms out of 500ms) cpu usage by thread 'http-apr-8080-Poller'
+     10/10 snapshots sharing following 3 elements
+       org.apache.tomcat.jni.Poll.poll(Native Method)
+       org.apache.tomcat.util.net.AprEndpoint$Poller.run(AprEndpoint.java:1767)
+       java.lang.Thread.run(Thread.java:745)
+   
+    1.1% (5.2ms out of 500ms) cpu usage by thread 'http-apr-8080-exec-70'
+     10/10 snapshots sharing following 11 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+       java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:85)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:31)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Node6][AZKmJv3CSQCUu-rtbAx5wA][ip-10-0-62-195][inet[/10.0.62.195:9300]]{master=false}
+   
+   100.6% (502.8ms out of 500ms) cpu usage by thread 'elasticsearch[Node6][[index-2015-09-08(0)][0]: Lucene Merge Thread #974]'
+     5/10 snapshots sharing following 12 elements
+       org.apache.lucene.codecs.compressing.LZ4.compress(LZ4.java:243)
+       org.apache.lucene.codecs.compressing.CompressionMode$LZ4FastCompressor.compress(CompressionMode.java:161)
+       org.apache.lucene.codecs.compressing.CompressingStoredFieldsWriter.flush(CompressingStoredFieldsWriter.java:236)
+       org.apache.lucene.codecs.compressing.CompressingStoredFieldsWriter.finishDocument(CompressingStoredFieldsWriter.java:166)
+       org.apache.lucene.codecs.compressing.CompressingStoredFieldsWriter.merge(CompressingStoredFieldsWriter.java:388)
+       org.apache.lucene.index.SegmentMerger.mergeFields(SegmentMerger.java:332)
+       org.apache.lucene.index.SegmentMerger.merge(SegmentMerger.java:100)
+       org.apache.lucene.index.IndexWriter.mergeMiddle(IndexWriter.java:4173)
+       org.apache.lucene.index.IndexWriter.merge(IndexWriter.java:3768)
+       org.apache.lucene.index.ConcurrentMergeScheduler.doMerge(ConcurrentMergeScheduler.java:405)
+       org.apache.lucene.index.TrackingConcurrentMergeScheduler.doMerge(TrackingConcurrentMergeScheduler.java:107)
+       org.apache.lucene.index.ConcurrentMergeScheduler$MergeThread.run(ConcurrentMergeScheduler.java:482)
+     5/10 snapshots sharing following 10 elements
+       org.apache.lucene.codecs.compressing.CompressionMode$4.decompress(CompressionMode.java:135)
+       org.apache.lucene.codecs.compressing.CompressingStoredFieldsReader$ChunkIterator.decompress(CompressingStoredFieldsReader.java:508)
+       org.apache.lucene.codecs.compressing.CompressingStoredFieldsWriter.merge(CompressingStoredFieldsWriter.java:378)
+       org.apache.lucene.index.SegmentMerger.mergeFields(SegmentMerger.java:332)
+       org.apache.lucene.index.SegmentMerger.merge(SegmentMerger.java:100)
+       org.apache.lucene.index.IndexWriter.mergeMiddle(IndexWriter.java:4173)
+       org.apache.lucene.index.IndexWriter.merge(IndexWriter.java:3768)
+       org.apache.lucene.index.ConcurrentMergeScheduler.doMerge(ConcurrentMergeScheduler.java:405)
+       org.apache.lucene.index.TrackingConcurrentMergeScheduler.doMerge(TrackingConcurrentMergeScheduler.java:107)
+       org.apache.lucene.index.ConcurrentMergeScheduler$MergeThread.run(ConcurrentMergeScheduler.java:482)
+   
+   29.3% (146.4ms out of 500ms) cpu usage by thread 'elasticsearch[Node6][search][T#7]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   22.7% (113.3ms out of 500ms) cpu usage by thread 'elasticsearch[Node6][search][T#45]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Node5][TnCdPKkcR5mk7emBoYnOjg][ip-10-0-62-50][inet[/10.0.62.50:9300]]{master=false}
+   
+   39.6% (198ms out of 500ms) cpu usage by thread 'elasticsearch[Node5][search][T#13]'
+     2/10 snapshots sharing following 14 elements
+       org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:192)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+       org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     8/10 snapshots sharing following 16 elements
+       org.elasticsearch.common.lucene.search.FilteredCollector.collect(FilteredCollector.java:60)
+       org.elasticsearch.common.lucene.MultiCollector.collect(MultiCollector.java:60)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:193)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+       org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   39.5% (197.5ms out of 500ms) cpu usage by thread 'elasticsearch[Node5][search][T#11]'
+     5/10 snapshots sharing following 16 elements
+       org.elasticsearch.common.lucene.search.FilteredCollector.collect(FilteredCollector.java:60)
+       org.elasticsearch.common.lucene.MultiCollector.collect(MultiCollector.java:60)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:193)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+       org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     3/10 snapshots sharing following 15 elements
+       org.apache.lucene.search.ConstantScoreQuery$ConstantScorer.nextDoc(ConstantScoreQuery.java:257)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:192)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+       org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     2/10 snapshots sharing following 33 elements
+       sun.nio.ch.NativeThread.current(Native Method)
+       sun.nio.ch.NativeThreadSet.add(NativeThreadSet.java:46)
+       sun.nio.ch.FileChannelImpl.readInternal(FileChannelImpl.java:704)
+       sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:694)
+       org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.readInternal(NIOFSDirectory.java:179)
+       org.apache.lucene.store.BufferedIndexInput.refill(BufferedIndexInput.java:342)
+       org.apache.lucene.store.BufferedIndexInput.readByte(BufferedIndexInput.java:54)
+       org.apache.lucene.store.DataInput.readVInt(DataInput.java:122)
+       org.apache.lucene.store.BufferedIndexInput.readVInt(BufferedIndexInput.java:221)
+       org.apache.lucene.codecs.blocktree.SegmentTermsEnumFrame.loadBlock(SegmentTermsEnumFrame.java:152)
+       org.apache.lucene.codecs.blocktree.SegmentTermsEnum.seekExact(SegmentTermsEnum.java:506)
+       org.apache.lucene.index.TermContext.build(TermContext.java:95)
+       org.apache.lucene.search.PhraseQuery$PhraseWeight.<init>(PhraseQuery.java:225)
+       org.apache.lucene.search.PhraseQuery.createWeight(PhraseQuery.java:323)
+       org.apache.lucene.search.BooleanQuery$BooleanWeight.<init>(BooleanQuery.java:185)
+       org.apache.lucene.search.BooleanQuery.createWeight(BooleanQuery.java:526)
+       org.apache.lucene.search.FilteredQuery.createWeight(FilteredQuery.java:82)
+       org.elasticsearch.common.lucene.search.XFilteredQuery.createWeight(XFilteredQuery.java:86)
+       org.apache.lucene.search.IndexSearcher.createNormalizedWeight(IndexSearcher.java:684)
+       org.apache.lucene.search.QueryWrapperFilter.getDocIdSet(QueryWrapperFilter.java:55)
+       org.elasticsearch.common.lucene.search.FilteredCollector.setNextReader(FilteredCollector.java:68)
+       org.elasticsearch.common.lucene.MultiCollector.setNextReader(MultiCollector.java:68)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:612)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   38.4% (192.2ms out of 500ms) cpu usage by thread 'elasticsearch[Node5][search][T#22]'
+     2/10 snapshots sharing following 20 elements
+       org.apache.lucene.search.MultiTermQueryWrapperFilter.getDocIdSet(MultiTermQueryWrapperFilter.java:112)
+       org.elasticsearch.index.cache.filter.weighted.WeightedFilterCache$FilterCacheFilterWrapper.getDocIdSet(WeightedFilterCache.java:177)
+       org.elasticsearch.common.lucene.search.XBooleanFilter.getDocIdSet(XBooleanFilter.java:59)
+       org.elasticsearch.common.lucene.search.ApplyAcceptedDocsFilter.getDocIdSet(ApplyAcceptedDocsFilter.java:46)
+       org.apache.lucene.search.FilteredQuery$1.scorer(FilteredQuery.java:130)
+       org.apache.lucene.search.QueryWrapperFilter$1.iterator(QueryWrapperFilter.java:59)
+       org.elasticsearch.common.lucene.docset.DocIdSets.toSafeBits(DocIdSets.java:100)
+       org.elasticsearch.common.lucene.search.FilteredCollector.setNextReader(FilteredCollector.java:68)
+       org.elasticsearch.common.lucene.MultiCollector.setNextReader(MultiCollector.java:68)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:612)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     3/10 snapshots sharing following 31 elements
+       sun.nio.ch.NativeThread.current(Native Method)
+       sun.nio.ch.NativeThreadSet.add(NativeThreadSet.java:46)
+       sun.nio.ch.FileChannelImpl.readInternal(FileChannelImpl.java:704)
+       sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:694)
+       org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.readInternal(NIOFSDirectory.java:179)
+       org.apache.lucene.store.BufferedIndexInput.refill(BufferedIndexInput.java:342)
+       org.apache.lucene.store.BufferedIndexInput.readBytes(BufferedIndexInput.java:140)
+       org.apache.lucene.store.BufferedIndexInput.readBytes(BufferedIndexInput.java:116)
+       org.apache.lucene.codecs.lucene41.ForUtil.readBlock(ForUtil.java:207)
+       org.apache.lucene.codecs.lucene41.Lucene41PostingsReader$BlockDocsEnum.refillDocs(Lucene41PostingsReader.java:404)
+       org.apache.lucene.codecs.lucene41.Lucene41PostingsReader$BlockDocsEnum.nextDoc(Lucene41PostingsReader.java:446)
+       org.apache.lucene.search.MultiTermQueryWrapperFilter.getDocIdSet(MultiTermQueryWrapperFilter.java:111)
+       org.elasticsearch.index.cache.filter.weighted.WeightedFilterCache$FilterCacheFilterWrapper.getDocIdSet(WeightedFilterCache.java:177)
+       org.elasticsearch.common.lucene.search.XBooleanFilter.getDocIdSet(XBooleanFilter.java:59)
+       org.elasticsearch.common.lucene.search.ApplyAcceptedDocsFilter.getDocIdSet(ApplyAcceptedDocsFilter.java:46)
+       org.apache.lucene.search.FilteredQuery$1.scorer(FilteredQuery.java:130)
+       org.apache.lucene.search.QueryWrapperFilter$1.iterator(QueryWrapperFilter.java:59)
+       org.elasticsearch.common.lucene.docset.DocIdSets.toSafeBits(DocIdSets.java:100)
+       org.elasticsearch.common.lucene.search.FilteredCollector.setNextReader(FilteredCollector.java:68)
+       org.elasticsearch.common.lucene.MultiCollector.setNextReader(MultiCollector.java:68)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:612)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     5/10 snapshots sharing following 16 elements
+       org.elasticsearch.common.lucene.search.FilteredCollector.collect(FilteredCollector.java:60)
+       org.elasticsearch.common.lucene.MultiCollector.collect(MultiCollector.java:60)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:193)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+       org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:117)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Ethan Edwards][klxqqnXWTdS8aOT-WCiucA][ip-10-0-110-197][inet[/10.0.110.197:9300]]{data=false, client=true}
+   
+    1.8% (8.8ms out of 500ms) cpu usage by thread 'http-apr-8080-Poller'
+     10/10 snapshots sharing following 3 elements
+       org.apache.tomcat.jni.Poll.poll(Native Method)
+       org.apache.tomcat.util.net.AprEndpoint$Poller.run(AprEndpoint.java:1767)
+       java.lang.Thread.run(Thread.java:745)
+   
+    1.0% (5.2ms out of 500ms) cpu usage by thread 'http-apr-8080-exec-98'
+     10/10 snapshots sharing following 11 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+       java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:85)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:31)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+       java.lang.Thread.run(Thread.java:745)
+   
+    0.7% (3.5ms out of 500ms) cpu usage by thread 'Thread-5'
+     10/10 snapshots sharing following 5 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+       java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+       com.alechko.seeh.analytics.resources.AnalyticsEventsQueueConsumerTaskAbs.run(AnalyticsEventsQueueConsumerTaskAbs.java:67)
+
+::: [Master-1][V9rJ4C1pStibYnb_A8cMRg][ip-10-0-110-159][inet[/10.0.110.159:9300]]{data=false, master=true}
+   
+    0.5% (2.5ms out of 500ms) cpu usage by thread 'elasticsearch[Master-1][transport_client_worker][T#2]{New I/O worker #2}'
+     10/10 snapshots sharing following 15 elements
+       sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+       sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+       sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+       sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+       sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+       org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:415)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+       org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+       org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+       org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+       java.lang.Thread.run(Thread.java:745)
+   
+    0.5% (2.3ms out of 500ms) cpu usage by thread 'elasticsearch[Master-1][transport_client_worker][T#1]{New I/O worker #1}'
+     10/10 snapshots sharing following 15 elements
+       sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+       sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+       sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+       sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+       sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+       org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:415)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+       org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+       org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+       org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+       java.lang.Thread.run(Thread.java:745)
+   
+    0.1% (702.7micros out of 500ms) cpu usage by thread 'elasticsearch[Master-1][http_server_worker][T#1]{New I/O worker #7}'
+     10/10 snapshots sharing following 15 elements
+       sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+       sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+       sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+       sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+       sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+       org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:415)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+       org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+       org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+       org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Node1][_k1Mquk7S16UY-3m5bF10g][ip-10-0-63-27][inet[/10.0.63.27:9300]]{master=false}
+   
+   72.2% (361.1ms out of 500ms) cpu usage by thread 'elasticsearch[Node1][search][T#1]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   65.9% (329.7ms out of 500ms) cpu usage by thread 'elasticsearch[Node1][search][T#28]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   58.0% (290ms out of 500ms) cpu usage by thread 'elasticsearch[Node1][search][T#40]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Cloud 9][aT17blDQR1S0McDNCu0SnA][ip-10-0-110-34][inet[/10.0.110.34:9300]]{data=false, client=true}
+   
+    1.9% (9.4ms out of 500ms) cpu usage by thread 'http-apr-8080-Poller'
+     10/10 snapshots sharing following 3 elements
+       org.apache.tomcat.jni.Poll.poll(Native Method)
+       org.apache.tomcat.util.net.AprEndpoint$Poller.run(AprEndpoint.java:1767)
+       java.lang.Thread.run(Thread.java:745)
+   
+    0.8% (3.9ms out of 500ms) cpu usage by thread 'Thread-5'
+     10/10 snapshots sharing following 5 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+       java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+       com.alechko.seeh.analytics.resources.AnalyticsEventsQueueConsumerTaskAbs.run(AnalyticsEventsQueueConsumerTaskAbs.java:67)
+   
+    0.5% (2.5ms out of 500ms) cpu usage by thread 'Thread-7'
+     10/10 snapshots sharing following 5 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+       java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+       com.alechko.seeh.analytics.resources.AnalyticsEventsQueueConsumerTaskAbs.run(AnalyticsEventsQueueConsumerTaskAbs.java:67)
+
+::: [Shinchuko Lotus][vWpxw5eFR_ad8L2XzjE6Aw][ip-10-0-110-115][inet[/10.0.110.115:9300]]{data=false, client=true}
+   
+    1.8% (8.8ms out of 500ms) cpu usage by thread 'http-apr-8080-Poller'
+     10/10 snapshots sharing following 3 elements
+       org.apache.tomcat.jni.Poll.poll(Native Method)
+       org.apache.tomcat.util.net.AprEndpoint$Poller.run(AprEndpoint.java:1767)
+       java.lang.Thread.run(Thread.java:745)
+   
+    1.5% (7.5ms out of 500ms) cpu usage by thread 'http-apr-8080-exec-125'
+     10/10 snapshots sharing following 11 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+       java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:85)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:31)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+       java.lang.Thread.run(Thread.java:745)
+   
+    1.2% (5.7ms out of 500ms) cpu usage by thread 'http-apr-8080-exec-2'
+     10/10 snapshots sharing following 11 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+       java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:85)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:31)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Node2][DpIItCBNSp2BXleMOrsrrA][ip-10-0-62-73][inet[/10.0.62.73:9300]]{master=false}
+   
+   74.8% (374.1ms out of 500ms) cpu usage by thread 'elasticsearch[Node2][search][T#10]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   63.7% (318.5ms out of 500ms) cpu usage by thread 'elasticsearch[Node2][search][T#9]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   57.6% (287.7ms out of 500ms) cpu usage by thread 'elasticsearch[Node2][search][T#34]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Node4][taGddbMVSUiYzhk0dvrBjg][ip-10-0-60-11][inet[/10.0.60.11:9300]]{master=false}
+   
+   30.0% (150.1ms out of 500ms) cpu usage by thread 'elasticsearch[Node4][search][T#39]'
+     2/10 snapshots sharing following 18 elements
+       org.elasticsearch.search.facet.datehistogram.CountDateHistogramFacetExecutor$Collector.collect(CountDateHistogramFacetExecutor.java:93)
+       org.elasticsearch.common.lucene.search.FilteredCollector.collect(FilteredCollector.java:61)
+       org.apache.lucene.search.MultiCollector.collect(MultiCollector.java:106)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:193)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+       org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.facet.FacetPhase.execute(FacetPhase.java:186)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:171)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     5/10 snapshots sharing following 15 elements
+       org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:193)
+       org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+       org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.facet.FacetPhase.execute(FacetPhase.java:186)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:171)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     2/10 snapshots sharing following 23 elements
+       org.apache.lucene.codecs.lucene41.Lucene41PostingsReader$BlockDocsEnum.refillDocs(Lucene41PostingsReader.java:404)
+       org.apache.lucene.codecs.lucene41.Lucene41PostingsReader$BlockDocsEnum.nextDoc(Lucene41PostingsReader.java:446)
+       org.apache.lucene.search.MultiTermQueryWrapperFilter.getDocIdSet(MultiTermQueryWrapperFilter.java:111)
+       org.elasticsearch.index.cache.filter.weighted.WeightedFilterCache$FilterCacheFilterWrapper.getDocIdSet(WeightedFilterCache.java:177)
+       org.elasticsearch.common.lucene.search.XBooleanFilter.getDocIdSet(XBooleanFilter.java:59)
+       org.elasticsearch.common.lucene.search.ApplyAcceptedDocsFilter.getDocIdSet(ApplyAcceptedDocsFilter.java:46)
+       org.apache.lucene.search.FilteredQuery$1.scorer(FilteredQuery.java:130)
+       org.apache.lucene.search.QueryWrapperFilter$1.iterator(QueryWrapperFilter.java:59)
+       org.elasticsearch.common.lucene.docset.DocIdSets.toSafeBits(DocIdSets.java:100)
+       org.elasticsearch.common.lucene.search.FilteredCollector.setNextReader(FilteredCollector.java:68)
+       org.apache.lucene.search.MultiCollector.setNextReader(MultiCollector.java:113)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:612)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.facet.FacetPhase.execute(FacetPhase.java:186)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:171)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+     unique snapshot
+       sun.nio.ch.NativeThread.current(Native Method)
+       sun.nio.ch.NativeThreadSet.add(NativeThreadSet.java:46)
+       sun.nio.ch.FileChannelImpl.readInternal(FileChannelImpl.java:704)
+       sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:694)
+       org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.readInternal(NIOFSDirectory.java:179)
+       org.apache.lucene.store.BufferedIndexInput.refill(BufferedIndexInput.java:342)
+       org.apache.lucene.store.BufferedIndexInput.readBytes(BufferedIndexInput.java:140)
+       org.apache.lucene.store.BufferedIndexInput.readBytes(BufferedIndexInput.java:116)
+       org.apache.lucene.codecs.lucene41.ForUtil.readBlock(ForUtil.java:207)
+       org.apache.lucene.codecs.lucene41.Lucene41PostingsReader$BlockDocsEnum.refillDocs(Lucene41PostingsReader.java:404)
+       org.apache.lucene.codecs.lucene41.Lucene41PostingsReader$BlockDocsEnum.nextDoc(Lucene41PostingsReader.java:446)
+       org.apache.lucene.search.TermScorer.nextDoc(TermScorer.java:65)
+       org.elasticsearch.common.lucene.docset.DocIdSets.toFixedBitSet(DocIdSets.java:113)
+       org.elasticsearch.common.lucene.docset.DocIdSets.toSafeBits(DocIdSets.java:104)
+       org.elasticsearch.common.lucene.search.FilteredCollector.setNextReader(FilteredCollector.java:68)
+       org.apache.lucene.search.MultiCollector.setNextReader(MultiCollector.java:113)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:612)
+       org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:191)
+       org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:309)
+       org.elasticsearch.search.facet.FacetPhase.execute(FacetPhase.java:186)
+       org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:171)
+       org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:275)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:776)
+       org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:767)
+       org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.run(MessageChannelHandler.java:275)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   22.4% (112.2ms out of 500ms) cpu usage by thread 'elasticsearch[Node4][search][T#7]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   21.0% (104.8ms out of 500ms) cpu usage by thread 'elasticsearch[Node4][search][T#37]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Master-2][s3Np2nlpRtiryRtKszeLzA][ip-10-0-110-157][inet[/10.0.110.157:9300]]{data=false, master=true}
+   
+    0.6% (2.8ms out of 500ms) cpu usage by thread 'elasticsearch[Master-2][transport_client_worker][T#2]{New I/O worker #2}'
+     10/10 snapshots sharing following 15 elements
+       sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+       sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+       sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+       sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+       sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+       org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:415)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+       org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+       org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+       org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+       java.lang.Thread.run(Thread.java:745)
+   
+    0.4% (1.8ms out of 500ms) cpu usage by thread 'elasticsearch[Master-2][transport_client_worker][T#1]{New I/O worker #1}'
+     10/10 snapshots sharing following 15 elements
+       sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+       sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+       sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+       sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+       sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+       org.elasticsearch.common.netty.channel.socket.nio.SelectorUtil.select(SelectorUtil.java:68)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.select(AbstractNioSelector.java:415)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:212)
+       org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+       org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+       org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+       org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+       java.lang.Thread.run(Thread.java:745)
+   
+    0.3% (1.3ms out of 500ms) cpu usage by thread 'elasticsearch[Master-2][scheduler][T#1]'
+     10/10 snapshots sharing following 9 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+       java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+       java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Lemuel Dorcas][FoT180ggSV-yRH1Dbu09MA][ip-10-0-110-173][inet[/10.0.110.173:9300]]{data=false, client=true}
+   
+    4.4% (22.1ms out of 500ms) cpu usage by thread 'pool-5-thread-119'
+     10/10 snapshots sharing following 17 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1037)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1328)
+       org.elasticsearch.common.util.concurrent.BaseFuture$Sync.get(BaseFuture.java:257)
+       org.elasticsearch.common.util.concurrent.BaseFuture.get(BaseFuture.java:92)
+       com.alechko.seeh.ds.elasticsearch.ElasticSearchCRUDAccessorImpl.bulk(ElasticSearchCRUDAccessorImpl.java:75)
+       com.alechko.seeh.ds.elasticsearch.ElasticSearchCRUDAccessorImpl.bulkIndex(ElasticSearchCRUDAccessorImpl.java:88)
+       com.alechko.seeh.analytics.resources.ElasticSearchAnalyticsEventsConveyorTaskAbs.dispatchBulkIndexRequest(ElasticSearchAnalyticsEventsConveyorTaskAbs.java:64)
+       com.alechko.seeh.analytics.resources.ElasticSearchAnalyticsEventsConveyorTaskAbs.conveyAnalyticsEvents(ElasticSearchAnalyticsEventsConveyorTaskAbs.java:33)
+       com.alechko.seeh.analytics.resources.ElasticSearchAnalyticsEventsConveyorTaskAbs.conveyAnalyticsEvents(ElasticSearchAnalyticsEventsConveyorTaskAbs.java:15)
+       com.alechko.seeh.analytics.resources.AnalyticsEventsConveyorTaskAbs.call(AnalyticsEventsConveyorTaskAbs.java:46)
+       com.alechko.seeh.analytics.resources.AnalyticsEventsConveyorTaskAbs.call(AnalyticsEventsConveyorTaskAbs.java:12)
+       java.util.concurrent.FutureTask.run(FutureTask.java:266)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+    2.1% (10.2ms out of 500ms) cpu usage by thread 'http-apr-8080-Poller'
+     10/10 snapshots sharing following 3 elements
+       org.apache.tomcat.jni.Poll.poll(Native Method)
+       org.apache.tomcat.util.net.AprEndpoint$Poller.run(AprEndpoint.java:1767)
+       java.lang.Thread.run(Thread.java:745)
+   
+    1.2% (5.8ms out of 500ms) cpu usage by thread 'http-apr-8080-exec-44'
+     10/10 snapshots sharing following 11 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+       java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:85)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:31)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Node3][qgwxO0xMSzaAxKZmMg2pzQ][ip-10-0-60-234][inet[/10.0.60.234:9300]]{master=false}
+   
+   48.9% (244.3ms out of 500ms) cpu usage by thread 'elasticsearch[Node3][search][T#38]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   35.6% (177.8ms out of 500ms) cpu usage by thread 'elasticsearch[Node3][search][T#7]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+   
+   34.0% (170.1ms out of 500ms) cpu usage by thread 'elasticsearch[Node3][search][T#25]'
+     10/10 snapshots sharing following 10 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.LinkedTransferQueue.awaitMatch(LinkedTransferQueue.java:737)
+       java.util.concurrent.LinkedTransferQueue.xfer(LinkedTransferQueue.java:647)
+       java.util.concurrent.LinkedTransferQueue.take(LinkedTransferQueue.java:1265)
+       org.elasticsearch.common.util.concurrent.SizeBlockingQueue.take(SizeBlockingQueue.java:162)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       java.lang.Thread.run(Thread.java:745)
+
+::: [Satannish][CPZKrEOrRj6T_aM3g6dvkA][ip-10-0-110-190][inet[/10.0.110.190:9300]]{data=false, client=true}
+   
+    1.7% (8.5ms out of 500ms) cpu usage by thread 'http-apr-8080-Poller'
+     10/10 snapshots sharing following 1 elements
+       java.lang.Thread.run(Thread.java:745)
+   
+    1.0% (5ms out of 500ms) cpu usage by thread 'http-apr-8080-exec-31'
+     10/10 snapshots sharing following 11 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+       java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:85)
+       org.apache.tomcat.util.threads.TaskQueue.poll(TaskQueue.java:31)
+       java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+       java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+       java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+       org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+       java.lang.Thread.run(Thread.java:745)
+   
+    0.7% (3.5ms out of 500ms) cpu usage by thread 'Thread-5'
+     10/10 snapshots sharing following 5 elements
+       sun.misc.Unsafe.park(Native Method)
+       java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+       java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+       java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+       com.alechko.seeh.analytics.resources.AnalyticsEventsQueueConsumerTaskAbs.run(AnalyticsEventsQueueConsumerTaskAbs.java:67)
+
